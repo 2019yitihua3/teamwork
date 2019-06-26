@@ -74,6 +74,11 @@
 				<param name="root">jsonResult</param>
 			</result>
 		</action>
+		<action name="listNewsByType" class="news" method="listNewsByType">
+			<result type="json">
+				<param name="root">jsonResult</param>
+			</result>
+		</action>
 		<!-- 增加用户 -->
 		<action name="goAddUser" class="userAct" method="goAddUser">
 			<result name="goadduser">/WEB-INF/web/useradd.jsp</result>

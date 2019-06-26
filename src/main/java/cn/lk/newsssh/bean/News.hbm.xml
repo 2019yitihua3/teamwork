@@ -15,6 +15,11 @@
                 <comment>新闻标题</comment>
             </column>
         </property>
+        <property name="type" type="java.lang.String">
+            <column name="type" not-null="true">
+                <comment>新闻类别</comment>
+            </column>
+        </property>
         <property name="content" type="java.lang.String">
             <column name="content" length="65535" not-null="true">
                 <comment>新闻内容</comment>

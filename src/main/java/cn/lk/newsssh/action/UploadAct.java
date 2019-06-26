@@ -12,7 +12,6 @@ import java.io.PrintWriter;
 import java.math.BigDecimal;
 import java.util.UUID;
 
-@Controller("uploadAct")
 public class UploadAct extends ActionSupport {
 
     private File filedata;      

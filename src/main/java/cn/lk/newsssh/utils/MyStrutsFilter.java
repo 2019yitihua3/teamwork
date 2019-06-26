@@ -18,7 +18,7 @@ public class MyStrutsFilter extends StrutsPrepareAndExecuteFilter {
 			String url = request.getRequestURI();
 			req.setCharacterEncoding("UTF-8");
 			res.setCharacterEncoding("UTF-8");
-			if (url.contains("controller.jsp")) { //ueditor不经过Struts2的Filter
+			if (url.contains("jsp/controller.jsp")) { //ueditor不经过Struts2的Filter
 				System.out.println("myfilter:"+url);
 				chain.doFilter(req, res);
 			}else{

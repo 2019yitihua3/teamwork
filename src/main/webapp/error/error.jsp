@@ -13,7 +13,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta name="author" content="songjinzhong,songjz.ecnu@gmail.com">
     <title>404</title>
-
+    <!-- 记住把下面的 homePageName、homePageUrl 改成你想需要的内容 -->
     <script type="text/javascript" src="#" homePageName="回到主页" homePageUrl="www.baidu.com" charset="utf-8"></script>
     <script type="text/javascript" src="https://qzone.qq.com/gy/404/data.js" charset="utf-8"></script>
     <script type="text/javascript" src="https://qzone.qq.com/gy/404/page.js" charset="utf-8"></script>

@@ -32,7 +32,7 @@ String basePath2 = request.getScheme()+"://"+request.getServerName()+":"+request
       </div>
       <div data-options="region:'south',border:false"
             style="height:30px;padding:5px;text-align:center;font-family: arial;
-  color: #A0B1BB;">Copyright © 2018 CharlesLiu.
+  color: #A0B1BB;">Copyright © 2019
       </div>
       <div data-options="region:'center'">
             <div id="tabs" class="easyui-tabs" fit="true" border="false">

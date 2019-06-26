@@ -32,6 +32,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    			<td style="text-align:left;width:10%;">新闻标题:</td>
 	    			<td><input class="easyui-textbox" type="text" id="title" data-options="required:true" style="width:100%;"></input></td>
 	    		</tr>
+				<tr>
+					<td style="text-align:left;width:10%;">栏目类别:</td>
+					<td> <select id="type" >
+					</select></td>
+				</tr>
 	    		<tr>
 	    			<td style="text-align:left;">新闻发布人:</td>
 	    			<td><input class="easyui-textbox" type="text" id="cruser" data-options="required:true" style="width:100%;"></input></td>
@@ -62,7 +67,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				var title=$("#title").textbox("getValue");
 				var cruser=$("#cruser").textbox("getValue");
 				var content=ue.getContent();
-				
+		        var type = document.getElementById("type").value;
 				if(title==""){
 					parent.$.messager.alert('系统提示','请输入新闻标题','warning');
 					return;
@@ -79,7 +84,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			$.ajax({
             url : "<%=basePath%>saveAddNews",
       //只封装和传输指定的数据
-            data :{"news.title":title,"news.cruser":cruser,"news.content":content},
+            data :{"news.title":title,"news.type":type,"news.cruser":cruser,"news.content":content},
             type:"POST",
             success : function (res) {
                   if (res.ok) {
@@ -104,6 +109,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  	
 
 <script>
-
+$(document).ready(function () {
+    $.ajax({
+        timeout: 3000,
+        async: false,
+        type: "GET",
+        url: "<%=basePath%>findListType",
+        dataType: "json",
+        success: function (data) {
+			console.log(data);
+            for (var i = 0; i < data.length; i++) {
+                $("#type").append("<option value=\"" + data[i].typename + "\" >" +data[i].typename+" " + "</option>");
+            }
+        }
+    });
+});
 </script>
 </html>

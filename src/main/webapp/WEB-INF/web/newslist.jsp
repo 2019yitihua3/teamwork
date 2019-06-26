@@ -42,7 +42,7 @@ $("#dg").datagrid({
 					striped : true,
 					border : true,
 					collapsible : false,
-					url : "<%=basePath%>listNews",
+					url : "<%=basePath%>listNewsByType",
 					queryParams : {
 						"s_name" : s_name
 					},
@@ -63,6 +63,15 @@ $("#dg").datagrid({
 											+ (value ? value : '') + '</span>';
 								}
 							},
+                            {
+                              title : '栏目类别',
+                              field : 'type',
+                              width : 200,
+                              formatter : function(value, row, index) {
+                                return '<span title='+value+'>'
+                                    + (value ? value : '') + '</span>';
+                              }
+                            },
 							{
 								title:'发布时间', 
 								field:'tjdate',

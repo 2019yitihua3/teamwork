@@ -20,7 +20,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <body>
 <table id="dg" cellpadding="2"></table>
 <div id="tb" style="padding:5px;">
-    <input id="xm" class="easyui-textbox" data-options="prompt:'姓名...'" style="width:200px;height:32px">
+    <input id="typename" class="easyui-textbox" data-options="prompt:'栏目...'" style="width:200px;height:32px">
     <a id="s_news" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'" style="width:60px;height:32px">查询</a>
 </div>
 </body>
@@ -30,9 +30,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script src="<%=basePath%>include/js/easyui-lang-zh_CN.js"></script>
 
 <script>
-var role1="超级管理员"
-var role2="普通管理员"
-var xm = "",uid="",title="";
+var id = "",typename="";
 function loadGrid(){
 xm=$("#xm").val();
 $("#dg").datagrid({
@@ -42,9 +40,9 @@ $("#dg").datagrid({
 					striped : true,
 					border : true,
 					collapsible : false,
-					url : "<%=basePath%>listUser",
+					url : "<%=basePath%>listType",
 					queryParams : {
-						"xm" : xm
+						"typename" : typename
 					},
 					pagination : true,
 					rownumbers : true,
@@ -55,8 +53,8 @@ $("#dg").datagrid({
 							//标题过长时，显示部分文字和省略号。已给easyui中datagrid‐cell样式添加了属性 text‐overflow:ellipsis;
 							//鼠标停留时，显示全部文字
 							{
-								title : '用户id',
-								field : 'uid',
+								title : '栏目id',
+								field : 'id',
 								width : 200,
 								formatter : function(value, row, index) {
 									return '<span title='+value+'>'
@@ -64,48 +62,23 @@ $("#dg").datagrid({
 								}
 							},
 							{
-								title:'用户名',
-								field:'xm',
+								title:'栏目名称',
+								field:'typename',
 								width:150,
                                 formatter : function(value, row, index) {
                                     return '<span title='+value+'>'
                                         + (value ? value : '') + '</span>';
                                 }
                        		},
-                            {
-                             title:'所属',
-                             field:'bj',
-                             width:150,
-                             formatter : function(value, row, index) {
-                                return '<span title='+value+'>'
-                                    + (value ? value : '') + '</span>';
-                               }
-                            },
-                            {
-                              title:'角色',
-                              field:'role',
-                              width:150,
-                              formatter : function(value, row, index) {
-                                  if (value == "1") {
-                                      return '<span title=' + value + '>'
-                                          + (value ? role1 : '') + '</span>';
-                                  } else {
-                                      return '<span title=' + value + '>'
-                                          + (value ? role2 : '') + '</span>';
-                                  }
-                              }
-
-
-                            },
 							{
 								title : '操作',
 								field : 'hitnum',
 								width : 100,
 								formatter : function(value, row, index) {
-									var p = "<a href=\"javascript:editUser('"
-											+ row.uid + "')\">修改</a>";
-									p += " | <a href=\"javascript:delUser('"
-											+ row.uid+ "','" + row.xm
+									var p = "<a href=\"javascript:editType('"
+											+ row.id + "')\">修改</a>";
+									p += " | <a href=\"javascript:delType('"
+											+ row.id+ "','" + row.xm
 											+ "')\">删除</a>";
 									return p;
 								}
@@ -113,27 +86,26 @@ $("#dg").datagrid({
 					toolbar : '#tb'
 				});
 	}
-	function editUser(uid) {
-		parent.swNewTab("修改用户信息", "<%=basePath%>goEditUser?uid=" + uid);
+	function editType(id) {
+		parent.swNewTab("修改类别信息", "<%=basePath%>goEditType?id=" + id);
 	}
-	function delUser(userid, uername) {
-		uid = userid;
-		xm = uername;
-		parent.$.messager.confirm("系统提示", "您确认要删除“" + xm + "”吗？ ", function(r) {if (r){
+	function delType(id) {
+		id = id;
+		parent.$.messager.confirm("系统提示", "您确认要删除“" + id + "”吗？ ", function(r) {if (r){
 				$.ajax({
-					url : "<%=basePath%>doDelUser",
+					url : "<%=basePath%>doDelType",
 					data : {
-						"uid" : uid
+						"id" : id
 					},
 					type : "post",
 					success : function(res) {
 						if (res.delflag) {
-							parent.$.messager.alert("系统提示", "您已删除该用户： " + xm,	"info");
-							uid = "";
+							parent.$.messager.alert("系统提示", "您已删除该类别 ： " + id,	"info");
+							id = "";
 							xm = "";
 							loadGrid();
 						} else {
-							parent.$.messager.alert("系统提示", res, "error");
+							parent.$.messager.alert("系统提示", res.msg, "error");
 						}
 						return false;
 					},
@@ -147,7 +119,7 @@ $("#dg").datagrid({
 	$(function() {
 		loadGrid();
 		$("#s_news").click(function() {
-			xm = $("#xm").val();
+			typename = $("#typename").val();
 			loadGrid();
 		});
 		$("#tb").bind("keydown", function(e) {

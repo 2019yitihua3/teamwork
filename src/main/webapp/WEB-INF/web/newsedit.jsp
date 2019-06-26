@@ -33,6 +33,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    			<td style="text-align:left;width:10%;">新闻标题:</td>
 	    			<td><input class="easyui-textbox" type="text" id="title" data-options="required:true" style="width:100%;"></input></td>
 	    		</tr>
+				<tr>
+					<td style="text-align:left;width:10%;">栏目类别:</td>
+					<td> <select id="type" >
+					</select></td>
+				</tr>
 	    		<tr>
 	    			<td style="text-align:left;">新闻发布人:</td>
 	    			<td><input class="easyui-textbox" type="text" id="cruser" data-options="required:true" style="width:100%;"></input></td>
@@ -71,6 +76,7 @@ $(function(){
 					var a = $("#title").textbox("getValue");
 					var b = ue.getContent();
 					var c = $("#cruser").textbox("getValue");
+	                var type = document.getElementById("type").value;
 					if (a.length <= 0) {
 						$.messager.alert("系统提示", "必须填写新闻标题", "warning");
 						return;
@@ -86,6 +92,7 @@ $(function(){
 						url : "<%=basePath%>saveEditNews",
 						data : {
 							"news.title" : a,
+	                        "news.type" : type,
 							"news.content" : b,
 							"news.cruser" : c,
 							"news.id" : ${news.id}
@@ -107,4 +114,28 @@ $(function(){
 </script>
 
 </body>
+<script>
+var type="${news.type}";
+$(document).ready(function () {
+    $.ajax({
+        timeout: 3000,
+        async: false,
+        type: "GET",
+        url: "<%=basePath%>findListType",
+        dataType: "json",
+        success: function (data) {
+            console.log(type);
+            console.log(data);
+            for (var i = 0; i < data.length; i++) {
+				if(type==data[i].typename){
+                    $("#type").append("<option selected value=\"" + data[i].typename + "\" >" +data[i].typename+" " + "</option>");
+				}else{
+                    $("#type").append("<option value=\"" + data[i].typename + "\" >" +data[i].typename+" " + "</option>");
+				}
+
+            }
+        }
+    });
+});
+	</script>
 </html>

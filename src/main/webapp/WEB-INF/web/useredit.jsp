@@ -62,50 +62,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <script>
 var ue;
-<%--$(function(){
-
-		$("#uid").textbox("setValue", "${user.uid}");
-        $("#xm").textbox("setValue", "${user.xm}");
-        $("#bj").textbox("setValue", "${user.bj}");
-        $("#role").textbox("setValue", "${user.role}");
-		$('#baocunuser').click(
-				//function() {//发布新闻前，要校验
-					var a = $("#uid").textbox("uid");
-                    var b = $("#xm").textbox("xm");
-                    var c = $("#bj").textbox("bj");
-                    var d = $("#role").textbox("role");
-                    var e = $("#pwd").textbox("pwd");
-                    console.log(e);
-					if (a.length <= 0||b.length <= 0||c.length <= 0||d.length <= 0||e.length <= 0) {
-						$.messager.alert("系统提示", "有信息没有填写", "warning");
-						return;
-					}
-					$.ajax({
-						type : 'POST',
-						url : "<%=basePath%>saveEditUser",
-						data : {
-							"user.xm" : b,
-							"user.pwd" : c,
-                            "user.bj" :d,
-                            "user.role" : e,
-							"user.uid" : ${user.uid}
-						},
-						success : function(res) {
-							if (res.ok) {
-								parent.$.messager.alert("系统提示", "你已修改信息:"+ $("#xm").val(), "info");
-							} else {
-								parent.$.messager.alert("系统提示", "修改失败！ ","error");
-							}
-							return false;
-						},
-						error : function(res) {
-							parent.$.messager.alert("系统提示", "系统错误！", "error");
-						}
-					});
-				}
-				);
-	});
-</script>--%>
         $(function(){
             $("#uid").textbox("setValue", "${user.uid}");
             $("#xm").textbox("setValue", "${user.xm}");

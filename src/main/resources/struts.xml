@@ -117,6 +117,79 @@
 				<param name="root">jsonResult</param>
 			</result>
 		</action>
+		<!-- 获取新闻类别 -->
+		<action name="findListType" class="typeAct" method="findListType">
+			<result type="json">
+				<param name="root">jsonResult</param>
+			</result>
+		</action>
+		<!---->
+		<!-- 增加类型 -->
+		<action name="goAddType" class="typeAct" method="goAddType">
+			<result name="goaddtype">/WEB-INF/web/typeadd.jsp</result>
+		</action>
+		<action name="saveAddType" class="typeAct" method="saveAddType">
+			<result type="json">
+				<param name="root">jsonResult</param>
+			</result>
+		</action>
+		<!-- 查询类型 -->
+		<action name="goListType" class="typeAct" method="goListType">
+			<result name="golisttype">/WEB-INF/web/typelist.jsp</result>
+		</action>
+		<action name="listType" class="typeAct" method="listType">
+			<result type="json">
+				<param name="root">jsonResult</param>
+			</result>
+		</action>
+		<!-- 删除类型 -->
+		<action name="doDelType" class="typeAct" method="doDel1Type">
+			<result type="json">
+				<param name="root">jsonResult</param>
+			</result>
+		</action>
+		<!-- 修改类型 -->
+		<action name="goEditType" class="typeAct" method="goEditType">
+			<result name="goedittype">/WEB-INF/web/typeedit.jsp</result>
+		</action>
+		<action name="saveEditType" class="typeAct" method="saveEditType">
+			<result type="json">
+				<param name="root">jsonResult</param>
+			</result>
+		</action>
+		<!-- 增加权限 -->
+		<action name="goAddRole" class="roleAct" method="goAddRole">
+			<result name="goaddrole">/WEB-INF/web/roleadd.jsp</result>
+		</action>
+		<action name="saveAddRole" class="roleAct" method="saveAddRole">
+			<result type="json">
+				<param name="root">jsonResult</param>
+			</result>
+		</action>
+		<!-- 查询权限 -->
+		<action name="goListRole" class="roleAct" method="goListRole">
+			<result name="golistrole">/WEB-INF/web/rolelist.jsp</result>
+		</action>
+		<action name="listRole" class="roleAct" method="listRole">
+			<result type="json">
+				<param name="root">jsonResult</param>
+			</result>
+		</action>
+		<!-- 删除权限 -->
+		<action name="doDelRole" class="roleAct" method="doDel1Role">
+			<result type="json">
+				<param name="root">jsonResult</param>
+			</result>
+		</action>
+		<!-- 修改权限 -->
+		<action name="goEditRole" class="roleAct" method="goEditRole">
+			<result name="goeditrole">/WEB-INF/web/roleedit.jsp</result>
+		</action>
+		<action name="saveEditRole" class="roleAct" method="saveEditRole">
+			<result type="json">
+				<param name="root">jsonResult</param>
+			</result>
+		</action>
 	</package>
 	<package name="error" extends="struts-default">
 		<default-action-ref name="notFound" />

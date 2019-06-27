@@ -22,7 +22,7 @@
 
 ### 项目结构
 
-![QQ图片20190627181354](\src\main\webapp\include\img\readmepic\QQ图片20190627181354.png)
+![QQ图片20190627181354](/src/main/webapp/include/img/readmepic/QQ图片20190627181354.png)
 
 ![QQ图片20190627183345](\src\main\webapp\include\img\readmepic\QQ图片20190627183345.png)
 

@@ -3,6 +3,9 @@ package cn.lk.newsssh.bean;
 import javax.persistence.Entity;
 import java.util.Date;
 
+/**
+ * News entity. @author MyEclipse Persistence Tools
+ */
 
 @Entity
 public class News implements java.io.Serializable {
@@ -17,27 +20,34 @@ public class News implements java.io.Serializable {
 	private String cruser;
 	private Integer hitnum;
 
-	public void setType(String type) {
-		this.type = type;
-	}
-
 	public String getType() {
 		return type;
 	}
 
+	public void setType(String type) {
+		this.type = type;
+	}
+
 	// Constructors
 
+	/** default constructor */
+	public News() {
+	}
 
-	/** full constructor */
 	public News(Integer id, String title, String type, String content, Date tjdate, String cruser, Integer hitnum) {
+		this.id = id;
 		this.title = title;
+		this.type = type;
 		this.content = content;
 		this.tjdate = tjdate;
 		this.cruser = cruser;
 		this.hitnum = hitnum;
-		this.id = id;
-		this.type = type;
 	}
+
+	/** full constructor */
+
+
+	// Property accessors
 
 	public Integer getId() {
 		return this.id;

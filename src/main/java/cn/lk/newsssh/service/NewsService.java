@@ -33,7 +33,6 @@ public class NewsService {
         else 
         	return dao.find("from News news WHERE news.title like ? order by news.tjdate desc", new Object[]{'%' +title+'%'}, page, rows);
     }
-
     //按新闻标题分页查询
     public List<News> listDgNewsType(String title,String type,int page, int rows){
         if(title == null || "".equals(title))

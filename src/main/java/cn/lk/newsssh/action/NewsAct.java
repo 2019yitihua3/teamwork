@@ -2,7 +2,8 @@ package cn.lk.newsssh.action;
 
 
 import cn.lk.newsssh.bean.News;
-import cn.lk.newsssh.bean.*;
+import cn.lk.newsssh.bean.Role;
+import cn.lk.newsssh.bean.User;
 import cn.lk.newsssh.service.NewsService;
 import cn.lk.newsssh.service.RoleService;
 import cn.lk.newsssh.utils.GsonUtils;

@@ -15,5 +15,6 @@
                 <comment>新闻类别</comment>
             </column>
         </property>
+
     </class>
 </hibernate-mapping>

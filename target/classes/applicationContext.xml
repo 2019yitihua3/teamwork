@@ -35,8 +35,10 @@
 				<value>cn/lk/newsssh/bean/Cmenu.hbm.xml</value>
 				<value>cn/lk/newsssh/bean/News.hbm.xml</value>
 				<value>cn/lk/newsssh/bean/User.hbm.xml</value>
-				
+				<value>cn/lk/newsssh/bean/Ntype.hbm.xml</value>
+				<value>cn/lk/newsssh/bean/Role.hbm.xml</value>
 			</list>
+
 		</property>
 	</bean>
 	<bean id="transactionManager"

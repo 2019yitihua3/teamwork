@@ -24,9 +24,9 @@
 
 ![QQ图片20190627181354](/src/main/webapp/include/img/readmepic/QQ图片20190627181354.png)
 
-![QQ图片20190627183345](\src\main\webapp\include\img\readmepic\QQ图片20190627183345.png)
+![QQ图片20190627183345](/src/main/webapp/include/img/readmepic/QQ图片20190627183345.png)
 
-![QQ图片20190627183845](\src\main\webapp\include\img\readmepic\QQ图片20190627183845.png)
+![QQ图片20190627183845](/src/main/webapp/include/img/readmepic/QQ图片20190627183845.png)
 
 ### 类说明
 
@@ -85,71 +85,71 @@ Struts.xml：struts配置文件
 
 ### 项目截图
 
-![QQ图片20190627185606](\src\main\webapp\include\img\readmepic\QQ图片20190627185606.png)
+![QQ图片20190627185606](/src/main/webapp/include/img/readmepic/QQ图片20190627185606.png)
 
 点开新闻标题
 
-![QQ图片20190627185657](\src\main\webapp\include\img\readmepic\QQ图片20190627185657.png)
+![QQ图片20190627185657](/src/main/webapp/include/img/readmepic/QQ图片20190627185657.png)
 
 点击登陆按钮
 
-![QQ图片20190627185730](\src\main\webapp\include\img\readmepic\QQ图片20190627185730.png)
+![QQ图片20190627185730](/src/main/webapp/include/img/readmepic/QQ图片20190627185730.png)
 
 输入超级管理员的用户名和密码
 
-![QQ图片20190627185135](\src\main\webapp\include\img\readmepic\QQ图片20190627185135.png)
+![QQ图片20190627185135](/src/main/webapp/include/img/readmepic/QQ图片20190627185135.png)
 
 查询功能：输入关键字
 
-![QQ图片20190627185508](\src\main\webapp\include\img\readmepic\QQ图片20190627185508.png)
+![QQ图片20190627185508](/src/main/webapp/include/img/readmepic/QQ图片20190627185508.png)
 
 点击修改按钮
 
-![QQ图片20190627185350](\src\main\webapp\include\img\readmepic\QQ图片20190627185350.png)
+![QQ图片20190627185350](/src/main/webapp/include/img/readmepic/QQ图片20190627185350.png)
 
 点击删除按钮
 
-![QQ图片20190627190221](\src\main\webapp\include\img\readmepic\QQ图片20190627190221.png)
+![QQ图片20190627190221](/src/main/webapp/include/img/readmepic/QQ图片20190627190221.png)
 
-![QQ图片20190627190238](\src\main\webapp\include\img\readmepic\QQ图片20190627190238.png)
+![QQ图片20190627190238](/src/main/webapp/include/img/readmepic/QQ图片20190627190238.png)
 
 添加新闻：手动输入，也可以通过上传附件的形式
 
-![QQ图片20190627185545](\src\main\webapp\include\img\readmepic\QQ图片20190627185545.png)
+![QQ图片20190627185545](/src/main/webapp/include/img/readmepic/QQ图片20190627185545.png)
 
-![QQ图片20190627190423](\src\main\webapp\include\img\readmepic\QQ图片20190627190423.png)
+![QQ图片20190627190423](/src/main/webapp/include/img/readmepic/QQ图片20190627190423.png)
 
 查看用户列表，可以进行修改、删除操作
 
-![QQ图片20190627190540](\src\main\webapp\include\img\readmepic\QQ图片20190627190540.png)
+![QQ图片20190627190540](/src/main/webapp/include/img/readmepic/QQ图片20190627190540.png)
 
-![QQ图片20190627190604](\src\main\webapp\include\img\readmepic\QQ图片20190627190604.png)
+![QQ图片20190627190604](/src/main/webapp/include/img/readmepic/QQ图片20190627190604.png)
 
 添加用户，输入用户信息
 
-![QQ图片20190627190627](\src\main\webapp\include\img\readmepic\QQ图片20190627190627.png)
+![QQ图片20190627190627](/src/main/webapp/include/img/readmepic/QQ图片20190627190627.png)
 
 查询、修改、删除新闻分类信息
 
-![QQ图片20190627191249](\src\main\webapp\include\img\readmepic\QQ图片20190627191249.png)
+![QQ图片20190627191249](/src/main/webapp/include/img/readmepic/QQ图片20190627191249.png)
 
-![QQ图片20190627191315](\src\main\webapp\include\img\readmepic\QQ图片20190627191315.png)
+![QQ图片20190627191315](/src/main/webapp/include/img/readmepic/QQ图片20190627191315.png)
 
 添加栏目分类
 
-![QQ图片20190627191343](\src\main\webapp\include\img\readmepic\QQ图片20190627191343.png)
+![QQ图片20190627191343](/src/main/webapp/include/img/readmepic/QQ图片20190627191343.png)
 
 查询、删除管理员角色信息
 
-![QQ图片20190627191556](\src\main\webapp\include\img\readmepic\QQ图片20190627191556.png)
+![QQ图片20190627191556](/src/main/webapp/include/img/readmepic/QQ图片20190627191556.png)
 
 添加管理员可访问的栏目资源权限
 
-![QQ图片20190627191626](\src\main\webapp\include\img\readmepic\QQ图片20190627191626.png)
+![QQ图片20190627191626](/src/main/webapp/include/img/readmepic/QQ图片20190627191626.png)
 
 用普通管理员的账号登陆，普通管理员没有用户管理的权限，只能进行新闻内容的修改、删除、添加
 
-![QQ图片20190627191742](\src\main\webapp\include\img\readmepic\QQ图片20190627191742.png)
+![QQ图片20190627191742](/src/main/webapp/include/img/readmepic/QQ图片20190627191742.png)
 
 ### 注意事项
 

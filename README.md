@@ -32,17 +32,17 @@
 
 **action**
 
-MenuAct:菜单权限控制类，根据用户的角色来展示相对应的菜单（author：付淅）
+MenuAct:菜单权限控制类，根据用户的角色来展示相对应的菜单
 
-NewsAct：新闻控制层类，调用服务层进行增删改查（author：付淅）
+NewsAct：新闻控制层类，调用服务层进行增删改查
 
-NtypeAct:栏目控制层类，调用服务层进行增删改查（author：刘哲）
+NtypeAct:栏目控制层类，调用服务层进行增删改查
 
-RoleAct:角色控制层类，调用服务层进行增删改查（author：付淅、刘哲）
+RoleAct:角色控制层类，调用服务层进行增删改查
 
-UploadAct:上传文件类（author：柯招坤）
+UploadAct:上传文件类
 
-UserAct:用户控制层类（author：付淅）
+UserAct:用户控制层类
 
 **bean**   
 
